@@ -1,5 +1,8 @@
 lockfileVersion: 5.4
 
+overrides:
+  '@vue/runtime-core>@vue/reactivity': npm:vue-functional-ref
+
 specifiers:
   nuxt: 3.0.0-rc.11
   vue-functional-ref: ^0.2.4
@@ -817,19 +820,23 @@ packages:
       '@vue/shared': 3.2.40
     dev: true
 
-  /@vue/runtime-core/3.2.40:
+  /@vue/runtime-core/3.2.40_vue@3.2.40:
     resolution: {integrity: sha512-U1+rWf0H8xK8aBUZhnrN97yoZfHbjgw/bGUzfgKPJl69/mXDuSg8CbdBYBn6VVQdR947vWneQBFzdhasyzMUKg==}
     dependencies:
-      '@vue/reactivity': 3.2.40
+      '@vue/reactivity': /vue-functional-ref/0.2.4_vue@3.2.40
       '@vue/shared': 3.2.40
+    transitivePeerDependencies:
+      - vue
     dev: true
 
-  /@vue/runtime-dom/3.2.40:
+  /@vue/runtime-dom/3.2.40_vue@3.2.40:
     resolution: {integrity: sha512-AO2HMQ+0s2+MCec8hXAhxMgWhFhOPJ/CyRXnmTJ6XIOnJFLrH5Iq3TNwvVcODGR295jy77I6dWPj+wvFoSYaww==}
     dependencies:
-      '@vue/runtime-core': 3.2.40
+      '@vue/runtime-core': 3.2.40_vue@3.2.40
       '@vue/shared': 3.2.40
       csstype: 2.6.21
+    transitivePeerDependencies:
+      - vue
     dev: true
 
   /@vue/server-renderer/3.2.40_vue@3.2.40:
@@ -4350,6 +4357,19 @@ packages:
       '@rollup/pluginutils': 4.2.1
     dev: false
 
+  /vue-functional-ref/0.2.4_vue@3.2.40:
+    resolution: {integrity: sha512-Cy25EKlgs1XmF8lYo9XHnkJ3NunE9R3wJ4WybKEhpocEwX1ruZCgyuc8UReauBGsm42csHeBEcBuR/vhxb2oKA==}
+    engines: {node: '>=14.19.0'}
+    peerDependencies:
+      vue: ^3.2.0
+    peerDependenciesMeta:
+      vue:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      vue: 3.2.40
+    dev: true
+
   /vue-router/4.1.5_vue@3.2.40:
     resolution: {integrity: sha512-IsvoF5D2GQ/EGTs/Th4NQms9gd2NSqV+yylxIyp/OYp8xOwxmU8Kj/74E9DTSYAyH5LX7idVUngN3JSj1X4xcQ==}
     peerDependencies:
@@ -4364,7 +4384,7 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.40
       '@vue/compiler-sfc': 3.2.40
-      '@vue/runtime-dom': 3.2.40
+      '@vue/runtime-dom': 3.2.40_vue@3.2.40
       '@vue/server-renderer': 3.2.40_vue@3.2.40
       '@vue/shared': 3.2.40
     dev: true

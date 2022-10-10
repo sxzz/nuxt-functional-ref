@@ -12,5 +12,10 @@
   },
   "dependencies": {
     "vue-functional-ref": "^0.2.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@vue/runtime-core>@vue/reactivity": "npm:vue-functional-ref"
+    }
   }
 }
